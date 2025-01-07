@@ -67,6 +67,7 @@ namespace R5T.L0087.T000
     /// A static class for expection methods.
     /// Also helps to provide a non-type parametered class for use in documentation comments related to expectations.
     /// </summary>
+    [UtilityTypeMarker]
     public static class Expectation
     {
         public static Expectation<TInput, TOutput> From<TInput, TOutput>(

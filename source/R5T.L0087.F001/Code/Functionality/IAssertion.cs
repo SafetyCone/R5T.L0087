@@ -27,7 +27,8 @@ namespace R5T.L0087.F001
         {
             this.Are_Equal(
                 expectedValue as IHasOutput<TOutput>,
-                encounteredValue);
+                encounteredValue,
+                expectedValue.OutputEqualityComparer);
         }
 
         public void Are_Equal<TOutput>(
