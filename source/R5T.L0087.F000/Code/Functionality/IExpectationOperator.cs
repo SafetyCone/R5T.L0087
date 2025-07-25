@@ -32,14 +32,14 @@ namespace R5T.L0087.F000
             IEnumerable<IExpectationPair<TInput, TOutput>> expectationPairs,
             Framework.IEqualityComparer<TOutput[]> outputArray_EqualityComparer)
             => this.From_ToArray(
-                expectationPairs.Now(),
+                expectationPairs.ToArray(),
                 outputArray_EqualityComparer);
 
         public Expectation<TInput[], TOutput[]> From<TInput, TOutput>(
             IEnumerable<IExpectationPair<TInput, TOutput>> expectationPairs,
             Simplified.IEqualityComparer<TOutput[]> outputArray_EqualityComparer)
             => this.From_ToArray(
-                expectationPairs.Now(),
+                expectationPairs.ToArray(),
                 outputArray_EqualityComparer);
 
         public Expectation<TInput[], TOutput[]> From_ToArray<TInput, TOutput>(
@@ -48,11 +48,11 @@ namespace R5T.L0087.F000
         {
             var inputs = expectationPairs
                 .Select(x => x.Input)
-                .Now();
+                .ToArray();
 
             var outputs = expectationPairs
                 .Select(x => x.Output)
-                .Now();
+                .ToArray();
 
             var output = this.From(
                 inputs,
@@ -66,7 +66,7 @@ namespace R5T.L0087.F000
             IEnumerable<IExpectationPair<TInput, TOutput>> expectationPairs,
             Simplified.IEqualityComparer<TOutput[]> outputArray_EqualityComparer)
             => this.From_ToArray(
-                expectationPairs.Now(),
+                expectationPairs.ToArray(),
                 outputArray_EqualityComparer);
 
 
